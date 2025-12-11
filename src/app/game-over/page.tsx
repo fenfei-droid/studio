@@ -6,14 +6,16 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // NOTE: This is a placeholder video. In a real application, this would be a proper jumpscare video/gif.
 const JUMPSCARE_VIDEO_URL = "https://storage.googleapis.com/nightmare/nightmare%20(1).mp4"; 
+const SCREAM_SOUND_URL = "https://cdn.pixabay.com/audio/2022/10/05/audio_55a16d549a.mp3";
 
 export default function GameOverPage() {
   const [showJumpscare, setShowJumpscare] = useState(true);
   const [showPoster, setShowPoster] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
   
   const searchParams = useSearchParams();
   const consequence = searchParams.get('consequence');
@@ -22,13 +24,18 @@ export default function GameOverPage() {
   const posterData = PlaceHolderImages.find(img => img.id === gameOverContent.moviePoster.image.id);
 
   useEffect(() => {
+    // Attempt to play the scream sound as soon as the component mounts
+    if (showJumpscare && audioRef.current) {
+      audioRef.current.play().catch(e => console.error("Audio play failed", e));
+    }
+
     const jumpscareTimer = setTimeout(() => {
       setShowJumpscare(false);
       setShowPoster(true);
     }, 2500); // Duration of the "jumpscare"
 
     return () => clearTimeout(jumpscareTimer);
-  }, []);
+  }, [showJumpscare]);
 
   let failureText = consequence || gameOverContent.text;
   if (reason === 'timeout') {
@@ -42,9 +49,11 @@ export default function GameOverPage() {
           src={JUMPSCARE_VIDEO_URL} 
           autoPlay 
           muted
+          playsInline
           className="w-auto h-auto min-w-full min-h-full" 
           aria-label="Jumpscare sequence"
         />
+        <audio ref={audioRef} src={SCREAM_SOUND_URL} preload="auto" aria-label="Scream sound effect"></audio>
          <div className="absolute inset-0 bg-black/50 animate-pulse"></div>
       </div>
     );
