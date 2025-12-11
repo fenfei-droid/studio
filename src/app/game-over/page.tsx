@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // NOTE: This is a placeholder video. In a real application, this would be a proper jumpscare video/gif.
-const JUMPSCARE_VIDEO_URL = "https://www.w3schools.com/html/mov_bbb.mp4"; 
+const JUMPSCARE_VIDEO_URL = "https://drive.google.com/file/d/1s8rhMuZZYC70Hnvc4eK4Qf5La7L4CzFk/view"; 
 
 export default function GameOverPage() {
   const [showJumpscare, setShowJumpscare] = useState(true);
