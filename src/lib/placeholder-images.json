@@ -33,8 +33,7 @@
     {
       "id": "patient-room",
       "description": "A wrecked and abandoned patient room.",
-      "imageUrl": "https://images.unsplash.com/photo-1464890100898-a385f744067f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZXNzeSUyMHJvb218ZW58MHx8fHwxNzY1NDIzOTg0fDA&ixlib
--rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1464890100898-a385f744067f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZXNzeSUyMHJvb218ZW58MHx8fHwxNzY1NDIzOTg0fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "messy room"
     },
     {
