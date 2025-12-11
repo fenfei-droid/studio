@@ -7,10 +7,8 @@ import { Button } from "../ui/button";
 import { VolumeX, Volume2 } from "lucide-react";
 
 const HOME_MUSIC_URL = "https://cdn.pixabay.com/audio/2022/10/26/audio_736636a23a.mp3";
-// Corrected link to be a direct audio file
 const INTRO_MUSIC_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; 
-const GAME_MUSIC_URL = "https://cdn.pixabay.com/audio/2024/05/09/audio_651a14c33d.mp3"; 
-const HORROR_PIANO_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; 
+const HORROR_PIANO_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3";
 
 
 export function BackgroundMusic() {
