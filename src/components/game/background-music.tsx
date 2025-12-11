@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import { VolumeX, Volume2 } from "lucide-react";
 
-const HOME_MUSIC_URL = "https://cdn.pixabay.com/audio/2022/10/26/audio_736636a23a.mp3";
+const HOME_MUSIC_URL = "https://cdn.pixabay.com/audio/2024/07/09/audio_b8fc051d1b.mp3";
 const INTRO_MUSIC_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; 
 const HORROR_PIANO_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3";
 
