@@ -7,9 +7,11 @@ import { Button } from "../ui/button";
 import { VolumeX, Volume2 } from "lucide-react";
 
 const HOME_MUSIC_URL = "https://cdn.pixabay.com/audio/2022/10/26/audio_736636a23a.mp3";
-const INTRO_MUSIC_URL = "https://pixabay.com/music/ambient-scary-movie-opener-443329/";
-const GAME_MUSIC_URL = "https://cdn.pixabay.com/audio/2024/05/09/audio_651a14c33d.mp3"; // Fallback
-const NEW_GAME_MUSIC_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; // Cinematic Horror Piano
+// Corrected link to be a direct audio file
+const INTRO_MUSIC_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; 
+const GAME_MUSIC_URL = "https://cdn.pixabay.com/audio/2024/05/09/audio_651a14c33d.mp3"; 
+const HORROR_PIANO_URL = "https://cdn.pixabay.com/audio/2023/10/24/audio_b863897a66.mp3"; 
+
 
 export function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -25,24 +27,22 @@ export function BackgroundMusic() {
       return INTRO_MUSIC_URL;
     }
     if (path.startsWith('/game/')) {
-       return NEW_GAME_MUSIC_URL;
+       return HORROR_PIANO_URL;
     }
-    return GAME_MUSIC_URL; // Default/fallback
+    // Fallback for game over or success pages
+    if (path.startsWith('/game-over') || path.startsWith('/success')) {
+        return HOME_MUSIC_URL;
+    }
+    return ""; // Return empty string if no match
   };
   
-  // Set initial URL correctly
-  const [musicUrl, setMusicUrl] = useState(() => getMusicUrl(pathname));
-
-  // Effect to update music on path change
-  useEffect(() => {
-    setMusicUrl(getMusicUrl(pathname));
-  }, [pathname]);
-
-
   // Effect to handle the first user interaction
   useEffect(() => {
     const handleFirstInteraction = () => {
       setHasInteracted(true);
+      if (audioRef.current && audioRef.current.paused) {
+          audioRef.current.play().catch(e => console.error("Audio play failed:", e));
+      }
       window.removeEventListener('click', handleFirstInteraction);
       window.removeEventListener('keydown', handleFirstInteraction);
     };
@@ -61,34 +61,24 @@ export function BackgroundMusic() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    const playAudio = async () => {
-      try {
-         if (audio.src !== musicUrl) {
-          audio.src = musicUrl;
-          audio.load();
-        }
-        if (audio.paused) {
-          await audio.play();
-        }
-      } catch (error) {
-        console.error("Audio playback failed:", error);
-        // If autoplay fails, we mute to avoid errors on subsequent attempts.
-        setIsMuted(true);
-      }
-    };
+    const newMusicUrl = getMusicUrl(pathname);
 
-    if (hasInteracted) {
-      playAudio();
+    if (newMusicUrl && audio.src !== newMusicUrl) {
+        audio.src = newMusicUrl;
+        audio.load();
+        if(hasInteracted) {
+            audio.play().catch(e => console.error("Audio play on track change failed:", e));
+        }
+    } else if (!newMusicUrl) {
+        audio.pause();
     }
     
-    // On initial load, the audio element is muted via the property.
-    // The `isMuted` state is false, so the icon shows "unmuted".
-    // This allows us to autoplay after interaction without changing the icon state.
-    audio.muted = !hasInteracted || isMuted;
+    audio.muted = isMuted;
 
-  }, [musicUrl, hasInteracted, isMuted]);
+  }, [pathname, hasInteracted, isMuted]);
 
   const toggleMute = () => {
+    // If this is the first interaction, it will also trigger the playback
     if (!hasInteracted) {
       setHasInteracted(true);
     }
@@ -97,6 +87,7 @@ export function BackgroundMusic() {
 
   return (
     <>
+      {/* We don't set the src here initially to avoid errors */}
       <audio ref={audioRef} loop playsInline />
       <Button
         variant="ghost"
