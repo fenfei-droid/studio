@@ -60,7 +60,7 @@ export default function GamePage({ params }: { params: { nodeId: string } }) {
               src={imageData.imageUrl}
               alt={imageData.description}
               fill
-              className="object-cover"
+              className="object-contain"
               data-ai-hint={imageData.imageHint}
               priority
             />
