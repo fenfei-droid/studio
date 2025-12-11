@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from "react";
 
 // NOTE: This is a placeholder video. In a real application, this would be a proper jumpscare video/gif.
 const JUMPSCARE_VIDEO_URL = "https://storage.googleapis.com/nightmare/nightmare%20(1).mp4"; 
-const SCREAM_SOUND_URL = "https://cdn.pixabay.com/audio/2022/10/05/audio_55a16d549a.mp3";
+const SCREAM_SOUND_URL = "https://cdn.pixabay.com/audio/2022/03/10/audio_09968be149.mp3";
 
 export default function GameOverPage() {
   const [showJumpscare, setShowJumpscare] = useState(true);

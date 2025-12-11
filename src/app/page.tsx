@@ -72,7 +72,7 @@ export default function Home() {
         </CardHeader>
         <CardContent className="text-center">
           <CardDescription className="mb-6 text-foreground/90">
-            A dare, a deserted hospital, a decision every ten seconds. Can you escape the Eyeless Nurse?
+            A dare, a deserted hospital and only 1 right decision.
           </CardDescription>
           <Button asChild size="lg" className="w-full font-bold group">
             <Link href="/game/intro-1">
