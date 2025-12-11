@@ -9,7 +9,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // NOTE: This is a placeholder video. In a real application, this would be a proper jumpscare video/gif.
-const JUMPSCARE_VIDEO_URL = "https://drive.google.com/file/d/1s8rhMuZZYC70Hnvc4eK4Qf5La7L4CzFk/view"; 
+const JUMPSCARE_VIDEO_URL = "https://storage.cloud.google.com/nightmare/nightmare%20(1).mp4"; 
 
 export default function GameOverPage() {
   const [showJumpscare, setShowJumpscare] = useState(true);
