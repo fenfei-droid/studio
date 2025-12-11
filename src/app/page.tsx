@@ -51,12 +51,8 @@ export default function Home() {
   const [showWarning, setShowWarning] = useState(false);
 
   useEffect(() => {
-    // Check if the user has seen the warning before
-    const hasSeenWarning = sessionStorage.getItem("hasSeenWarning");
-    if (!hasSeenWarning) {
-      setShowWarning(true);
-      sessionStorage.setItem("hasSeenWarning", "true");
-    }
+    // Always show the warning on page load
+    setShowWarning(true);
   }, []);
 
 
