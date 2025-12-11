@@ -3,49 +3,49 @@
     {
       "id": "hospital-exterior",
       "description": "The ominous exterior of an abandoned hospital at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1536154800961-9920ffae73e3?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1536154800961-9920ffae73e3",
       "imageHint": "abandoned hospital"
     },
     {
       "id": "hospital-interior",
       "description": "A decaying, dusty hallway inside the hospital.",
-      "imageUrl": "https://images.unsplash.com/photo-1512952935850-9e8c44398c1f?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1512952935850-9e8c44398c1f",
       "imageHint": "derelict hallway"
     },
     {
       "id": "eyeless-nurse",
       "description": "The terrifying Eyeless Nurse figure.",
-      "imageUrl": "https://images.unsplash.com/photo-1591344031106-1bb948e02557?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1591344031106-1bb948e02557",
       "imageHint": "scary nurse"
     },
     {
       "id": "nurse-close-up",
       "description": "A close-up of the Eyeless Nurse.",
-      "imageUrl": "https://images.unsplash.com/photo-1698422501954-df59b764cde8?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1698422501954-df59b764cde8",
       "imageHint": "horror face"
     },
     {
       "id": "hospital-hallway",
       "description": "A cross-section of a hospital hallway with multiple paths.",
-      "imageUrl": "https://images.unsplash.com/photo-1716447338820-277141a14251?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1716447338820-277141a14251",
       "imageHint": "dark corridor"
     },
     {
       "id": "patient-room",
       "description": "A wrecked and abandoned patient room.",
-      "imageUrl": "https://images.unsplash.com/photo-1464890100898-a385f744067f?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1464890100898-a385f744067f",
       "imageHint": "messy room"
     },
     {
       "id": "nurse-leaving-room",
       "description": "The nurse seen from behind, walking away down a hall.",
-      "imageUrl": "https://images.unsplash.com/photo-1626102678900-1eaff9070add?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1626102678900-1eaff9070add",
       "imageHint": "figure walking"
     },
     {
       "id": "escape",
       "description": "A person running out of a building at night.",
-      "imageUrl": "https://storage.googleapis.com/nightmare/Gemini_Generated_Image_54bt7t54bt7t54bt.png",
+      "imageUrl": "https://storage.googleapis.com/nightmare/Gemini_Generated_Image_qp1hb3qp1hb3qp1h.png",
       "imageHint": "person running"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "jumpscare",
       "description": "A jumpscare image or gif.",
-      "imageUrl": "https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?w=600&h=400",
+      "imageUrl": "https://images.unsplash.com/photo-1553465528-5a213ccc0c7b",
       "imageHint": "scary face"
     }
   ]
