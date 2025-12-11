@@ -12,7 +12,7 @@ const GAME_MUSIC_URL = "https://cdn.pixabay.com/audio/2024/05/09/audio_651a14c33
 
 export function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isMuted, setIsMuted] = useState(true); // Start muted
+  const [isMuted, setIsMuted] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const pathname = usePathname();
 
@@ -32,7 +32,6 @@ export function BackgroundMusic() {
   useEffect(() => {
     const handleFirstInteraction = () => {
       setHasInteracted(true);
-      setIsMuted(false); // Unmute on first interaction
       window.removeEventListener('click', handleFirstInteraction);
       window.removeEventListener('keydown', handleFirstInteraction);
     };
@@ -58,29 +57,33 @@ export function BackgroundMusic() {
         }
       } catch (error) {
         console.error("Audio playback failed:", error);
-        // If autoplay fails, we stay muted to avoid errors on subsequent attempts
+        // If autoplay fails, we mute to avoid errors on subsequent attempts.
         setIsMuted(true);
       }
     };
 
-    if (hasInteracted && !isMuted) {
+    if (hasInteracted) {
        if (audio.src !== musicUrl) {
         audio.src = musicUrl;
         audio.load();
       }
       playAudio();
     } else {
-      audio.pause();
+      // On initial load, mute the audio element until interaction.
+      // The `isMuted` state is false, so the icon shows "unmuted".
+      audio.muted = true;
     }
-  }, [musicUrl, hasInteracted, isMuted]);
+  }, [musicUrl, hasInteracted]);
 
   // Effect to handle mute state
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
-      audio.muted = isMuted;
+      // Let hasInteracted control the very first play.
+      // After that, the isMuted state is the source of truth.
+      audio.muted = hasInteracted ? isMuted : true;
     }
-  }, [isMuted]);
+  }, [isMuted, hasInteracted]);
 
   const toggleMute = () => {
     if (!hasInteracted) {
