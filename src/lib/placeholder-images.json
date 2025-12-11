@@ -21,13 +21,13 @@
     {
       "id": "nurse-close-up",
       "description": "A close-up of the Eyeless Nurse.",
-      "imageUrl": "https://images.unsplash.com/photo-1698422501954-df59b764cde8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxob3Jyb3IlMjBmYWNlfGVufDB8fHx8MTc2NTQxNzc0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1698422501954-df59b764cde8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxob3Jyb3IlMjBmYWNlfGVufDB8fHx8MTc2NTQxNzc0Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "horror face"
     },
     {
       "id": "hospital-hallway",
       "description": "A cross-section of a hospital hallway with multiple paths.",
-      "imageUrl": "https://images.unsplash.com/photo-1716447338820-277141a14251?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGFyayUyMGNvcnJpZG9yfGVufDB8fHx8MTc2NTQ1MDA3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1716447338820-277141a14251?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGFyayUyMGNvcnJpZG9yfGVufDB8fHx8MTc2NTQ1MDA3MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "dark corridor"
     },
     {
@@ -39,13 +39,13 @@
     {
       "id": "nurse-leaving-room",
       "description": "The nurse seen from behind, walking away down a hall.",
-      "imageUrl": "https://images.unsplash.com/photo-1626102678900-1eaff9070add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaWd1cmUlMjB3YWxraW5nfGVufDB8fHx8MTc2NTQ1MDA3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1626102678900-1eaff9070add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmaWd1cmUlMjB3YWxraW5nfGVufDB8fHx8MTc2NTQ1MDA3MXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "figure walking"
     },
     {
       "id": "escape",
       "description": "A person running out of a building at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1603455778956-d711832eafa4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcnVubmluZ3xlbnwwfHx8fDE3NjUzOTAyMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://storage.googleapis.com/nightmare/Gemini_Generated_Image_54bt7t54bt7t54bt.png",
       "imageHint": "person running"
     },
     {
@@ -57,7 +57,7 @@
     {
       "id": "jumpscare",
       "description": "A jumpscare image or gif.",
-      "imageUrl": "https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2FyeSUyMGZhY2V8ZW58MHx8fHwxNzY1NDUwMDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1553465528-5a213ccc0c7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzY2FyeSUyMGZhY2V8ZW58MHx8fHwxNzY1NDUwMDcxfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "scary face"
     }
   ]
